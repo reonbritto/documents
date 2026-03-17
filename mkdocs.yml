@@ -1,0 +1,112 @@
+site_name: DevSecOps Study Notes
+site_description: Comprehensive DevSecOps documentation for learning and reference
+site_author: Reon Britto
+site_url: https://reonbritto.github.io/documents/
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+repo_name: reonbritto/documents
+repo_url: https://github.com/reonbritto/documents
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/reonbritto
+
+nav:
+  - Home: index.md
+  - DevSecOps Fundamentals:
+      - Overview: devsecops/overview.md
+      - Culture & Mindset: devsecops/culture-and-mindset.md
+      - DevSecOps Pipeline: devsecops/pipeline.md
+  - Version Control Security:
+      - Git Security Best Practices: version-control/git-security.md
+      - Secret Management: version-control/secret-management.md
+      - Branch Protection & Policies: version-control/branch-protection.md
+  - CI/CD Security:
+      - Secure CI/CD Pipelines: cicd/secure-pipelines.md
+      - GitHub Actions Security: cicd/github-actions-security.md
+      - Pipeline Hardening: cicd/pipeline-hardening.md
+  - Container Security:
+      - Docker Security: containers/docker-security.md
+      - Kubernetes Security: containers/kubernetes-security.md
+      - Image Scanning & Signing: containers/image-scanning.md
+  - Infrastructure as Code:
+      - Terraform Security: iac/terraform-security.md
+      - Ansible Security: iac/ansible-security.md
+      - IaC Scanning Tools: iac/iac-scanning.md
+  - Application Security:
+      - SAST - Static Analysis: appsec/sast.md
+      - DAST - Dynamic Analysis: appsec/dast.md
+      - SCA - Dependency Scanning: appsec/sca.md
+      - OWASP Top 10: appsec/owasp-top10.md
+  - Cloud Security:
+      - AWS Security: cloud/aws-security.md
+      - Azure Security: cloud/azure-security.md
+      - Cloud Security Posture: cloud/cspm.md
+  - Monitoring & Incident Response:
+      - Security Monitoring: monitoring/security-monitoring.md
+      - SIEM & Log Management: monitoring/siem.md
+      - Incident Response: monitoring/incident-response.md
+  - Compliance & Governance:
+      - Compliance Frameworks: compliance/frameworks.md
+      - Policy as Code: compliance/policy-as-code.md
+      - Audit & Reporting: compliance/audit-reporting.md
